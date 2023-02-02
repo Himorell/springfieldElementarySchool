@@ -28,9 +28,9 @@ class CRUDStudentTest extends TestCase
         
         $students = Student::factory(2)->create();
         $student = $students[0];
-        $response = $this->get('/students.index');
+        $response = $this->get('student.index');
         $response->assertSee($student->name);
-        $response->assertStatus(200)->assertViewIs('students.index');
+        $response->assertStatus(200)->assertViewIs('student.index');
     }
 
     public function test_aStudentCanBeCreated(){
@@ -66,6 +66,15 @@ class CRUDStudentTest extends TestCase
         $response=$this->patch(route('students.update',$student->id), ['name'=>'New name']);
         $this->assertEquals('New name', Student::first()->name);
 
+    }
+
+    public function test_aStudentCanBeShowed(){
+        $this->withExceptionHandling();
+        $student=Student::factory()->create();
+        $this->assertCount(1,Student::all());
+        $response=$this->get(route('student.show', $student->id));
+        $response->assertSee($student->name);
+        $response->assertStatus(200)->assertViewIs('student.show');
     }
 
 }
