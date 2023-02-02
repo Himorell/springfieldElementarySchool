@@ -61,10 +61,10 @@
                                             <td>
                                                 <form action="{{ route('scores.destroy',$score->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('scores.show',$score->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('scores.edit',$score->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-success" onclick="return confirm('Are you sure to edit this score? {{ $score->alertName}} - ID {{$score->id }}')" href="{{ route('scores.edit',$score->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete this score? {{ $score->alertName}} - ID {{$score->id }}')"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

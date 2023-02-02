@@ -34,6 +34,6 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary"onclick="return confirm('Are you sure to submit this score? {{ $score->alertName}} - ID {{$score->id }}')">Submit</button>
     </div>
 </div>
