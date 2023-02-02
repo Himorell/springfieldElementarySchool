@@ -18,7 +18,11 @@ use App\Http\Controllers\StudentController;
 */
 
 Route::get('/', function () {
+<<<<<<< HEAD
     return view('welcome');
+=======
+    return view('home');
+>>>>>>> d0efc8dfd71ef097de9487d6d0cc69dce9bc9977
 });
 
 Auth::routes();
