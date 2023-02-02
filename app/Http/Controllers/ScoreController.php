@@ -33,7 +33,7 @@ class ScoreController extends Controller
     public function create()
     {
         $score = new Score();
-        $students = Student::pluck('name','surname','id');
+        $students = Student::pluck('name','id');
         return view('score.create', compact('score','students'));
     }
 
