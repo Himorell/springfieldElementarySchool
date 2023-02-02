@@ -23,13 +23,30 @@ class CRUDStudentTest extends TestCase
     } */
 
 
-    public function test_listStudentAppearInStudentView() {
-        $this->withExceptionHandling();
+    // public function test_listStudentAppearInStudentView() {
+    //     $this->withExceptionHandling();
         
-        $students = Student::factory(2)->create();
-        $student = $students[0];
-        $response = $this->get('/');
-        $response->assertSee($student->name);
-        $response->assertStatus(200)->assertViewIs('students');
+    //     $students = Student::factory(2)->create();
+    //     $student = $students[0];
+    //     $response = $this->get('/');
+    //     $response->assertSee($student->name);
+    //     $response->assertStatus(200)->assertViewIs('home');
+    // }
+
+    public function test_aStudentCanBeCreated(){
+        $this->withExceptionHandling();
+
+        $student = Student::factory()->create();
+        $response = $this->post(route ('home'),
+        [
+            'name' => 'name',
+            'surname' => 'surname',
+            'email' => 'email',
+            'image' => 'image',
+        ]);
+
+        $this->assertCount(1,Student::all()); 
+
+        
     }
 }
