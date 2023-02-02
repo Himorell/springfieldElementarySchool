@@ -47,6 +47,5 @@ class CRUDStudentTest extends TestCase
 
         $this->assertCount(1,Student::all()); 
 
-        
     }
 }
