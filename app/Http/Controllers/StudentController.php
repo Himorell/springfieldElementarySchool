@@ -43,7 +43,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Student::$rules);
+        // request()->validate(Student::$rules);
 
         $student = Student::create($request->all());
 
