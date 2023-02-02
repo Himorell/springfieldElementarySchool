@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Score;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class ScoreController extends Controller
     public function create()
     {
         $score = new Score();
-        return view('score.create', compact('score'));
+        $students = Student::pluck('name','surname','id');
+        return view('score.create', compact('score','students'));
     }
 
     /**

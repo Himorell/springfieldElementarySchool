@@ -18,7 +18,7 @@ use App\Http\Controllers\StudentController;
 */
 
 Route::get('/', function () {
-    return view('students');
+    return view('welcome');
 });
 
 Auth::routes();

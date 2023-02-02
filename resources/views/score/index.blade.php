@@ -35,7 +35,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 										<th>Id Students</th>
 										<th>Mark</th>
 										<th>Quarter</th>
@@ -50,8 +50,8 @@
                                     @foreach ($scores as $score)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $score->id_students }}</td>
+
+											<td>{{ $score->student->name }}</td>
 											<td>{{ $score->mark }}</td>
 											<td>{{ $score->quarter }}</td>
 											<td>{{ $score->subject }}</td>
