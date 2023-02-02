@@ -23,13 +23,13 @@ class Student extends Model
 {
     use HasFactory;
 
-    static $rules = [
-		'name' => 'required',
-		'surname' => 'required',
-		'email' => 'required',
-    ];
+    // static $rules = [
+		// 'name' => 'required',
+		// 'surname' => 'required',
+		// 'email' => 'required',
+    // ];
 
-    protected $perPage = 20;
+    // protected $perPage = 20;
 
     /**
      * Attributes that should be mass-assignable.
