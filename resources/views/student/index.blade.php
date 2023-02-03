@@ -57,7 +57,7 @@
                                             <td>
                                                 <form action="{{ route('students.destroy',$student->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('students.show',$student->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" onclick="return confirm('Are you sure to edit this student? {{ $student->alertName}} - ID {{$student->id }}')" href="{{ route('students.edit',$student->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('students.edit',$student->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"onclick="return confirm('Are you sure to delete this student? {{ $student->alertName}} - ID {{$student->id }}')"><i class="fa fa-fw fa-trash"></i> Delete</button>
