@@ -41,6 +41,4 @@ class DatabaseSeeder extends Seeder
         Student::factory(5)->create();
     }
 
-    
-
 }
