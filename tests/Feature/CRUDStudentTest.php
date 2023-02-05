@@ -28,7 +28,7 @@ class CRUDStudentTest extends TestCase
         
         $students = Student::factory(2)->create();
         $student = $students[0];
-        $response = $this->get('student.index');
+        $response = $this->get(route('students.index'));
         $response->assertSee($student->name);
         $response->assertStatus(200)->assertViewIs('student.index');
     }
@@ -72,9 +72,9 @@ class CRUDStudentTest extends TestCase
         $this->withExceptionHandling();
         $student=Student::factory()->create();
         $this->assertCount(1,Student::all());
-        $response=$this->get(route('student.show', $student->id));
+        $response=$this->get(route('students.show', $student->id));
         $response->assertSee($student->name);
-        $response->assertStatus(200)->assertViewIs('student.show');
+        $response->assertSuccessful(200)->assertViewIs('student.show');
     }
 
 }
