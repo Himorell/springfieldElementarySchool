@@ -31,6 +31,7 @@ class CRUDStudentTest extends TestCase
         $response = $this->get(route('students.index'));
         $response->assertSee($student->name);
         $response->assertStatus(200)->assertViewIs('student.index');
+        
     }
 
     public function test_aStudentCanBeCreated(){
@@ -60,7 +61,7 @@ class CRUDStudentTest extends TestCase
 
     public function test_aStudentCanBeUpdated(){
         $this->withExceptionHandling();
-        
+
         $student= Student::factory()->create();
         $this->assertCount(1,Student::all());
 
