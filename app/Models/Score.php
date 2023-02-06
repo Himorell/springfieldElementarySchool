@@ -26,10 +26,14 @@ class Score extends Model
     
     static $rules = [
 		'id_students' => 'required',
-		'mark' => 'required',
-		'quarter' => 'required',
+
 		'subject' => 'required',
-		'course' => 'required',
+    'quarter' => 'required',
+    'score1',
+    'score2',
+    'score3',
+
+    'course' => 'required',
 		'academicYear' => 'required',
     ];
 

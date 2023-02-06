@@ -108,4 +108,28 @@ class ScoreController extends Controller
         return redirect()->route('scores.index')
             ->with('success', 'Score deleted successfully');
     }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  Score $score
+     * @return \Illuminate\Http\Response
+     */
+    public function average(Request $request){
+
+
+        $scores = Score::all();
+
+        $averages = [];
+        foreach ($scores as $score) {
+            $subject = $score->subject;
+            $quarter = $score->trimester;
+            $average = ($score->score1 + $score->score2 + $score->note3) / 3;
+
+            $averages[$subject][$quarter] = $average;
+        }
+
+        return view('score.index' /* modificar ruta */, compact('averages'));
+    }
 }
