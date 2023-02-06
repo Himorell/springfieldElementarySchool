@@ -124,8 +124,8 @@ class ScoreController extends Controller
         $averages = [];
         foreach ($scores as $score) {
             $subject = $score->subject;
-            $quarter = $score->trimester;
-            $average = ($score->score1 + $score->score2 + $score->note3) / 3;
+            $quarter = $score->quarter;
+            $average = ($score->mark1 + $score->mark2 + $score->mark3) / 3;
 
             $averages[$subject][$quarter] = $average;
         }

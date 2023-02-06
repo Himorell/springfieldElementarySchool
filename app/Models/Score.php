@@ -29,9 +29,9 @@ class Score extends Model
 
 		'subject' => 'required',
     'quarter' => 'required',
-    'score1',
-    'score2',
-    'score3',
+    'mark1',
+    'mark2',
+    'mark3',
 
     'course' => 'required',
 		'academicYear' => 'required',
