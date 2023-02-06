@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="shortcut icon" type="image/png" sizes="512x512" href="{{ asset('/images/logo.png') }}">
     <title>{{ config('app.name', 'Springfield Elementary School') }}</title>
 
     <!-- Fonts -->
