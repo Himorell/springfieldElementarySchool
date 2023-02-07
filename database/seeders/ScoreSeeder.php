@@ -19,15 +19,15 @@ class ScoreSeeder extends Seeder
          /*    'id_students' => 1, */
 
 		    'subject' => 'Maths',
-            'quarter' => 'Second',
-            'mark1' => '',
-            'mark2' => '',
-            'mark3' => ''
+            'quarter' => '2',
+            'mark1' => '6',
+            'mark2' => '7',
+            'mark3' => '8'
 
             /* 'course' => '2',
 		    'academicYear' => '2022-2023', */
         )];
 
-        
+
     }
 }

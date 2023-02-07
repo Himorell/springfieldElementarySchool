@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Factories\ScoreFactory;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -19,12 +19,12 @@ class ScoreFactory extends Factory
         return [
             //
 		    'subject' =>$this->faker->name(),
-            'quarter' =>$this->faker->biasedNumberBetween($min = 1, $max = 10),
-            'mark1' =>$this->faker->biasedNumberBetween($min = 1, $max = 10),
-            'mark2' =>$this->faker->biasedNumberBetween($min = 1, $max = 10),
-            'mark3' =>$this->faker->biasedNumberBetween($min = 1, $max = 10),
+            'quarter' =>$this->faker->biasedNumberBetween($min = 1, $max = 10, $function = 'sqrt'),
+            'mark1' =>$this->faker->biasedNumberBetween($min = 1, $max = 10, $function = 'sqrt'),
+            'mark2' =>$this->faker->biasedNumberBetween($min = 1, $max = 10, $function = 'sqrt'),
+            'mark3' =>$this->faker->biasedNumberBetween($min = 1, $max = 10, $function = 'sqrt'),
 
-            'course' => $this->faker->biasedNumberBetween($min = 1, $max = 3),
+            'course' => $this->faker->biasedNumberBetween($min = 1, $max = 3, $function = 'sqrt'),
 		    'academicYear' => $this->faker->name(),
         ];
     }
