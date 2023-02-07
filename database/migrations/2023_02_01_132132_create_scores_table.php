@@ -21,11 +21,11 @@ return new class extends Migration
          
 		    $table->string('subject');
             $table->string('quarter');
-            $table->integer('mark1');
-            $table->integer('mark2');
-            $table->integer('mark3');
+            $table->integer('mark1')->nullable();
+            $table->integer('mark2')->nullable();
+            $table->integer('mark3')->nullable();
 
-            $table->string('course');
+            $table->integer('course');
 		    $table->string('academicYear');
             //$table->integer('exam');
 
