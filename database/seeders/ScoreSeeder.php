@@ -27,5 +27,7 @@ class ScoreSeeder extends Seeder
             /* 'course' => '2',
 		    'academicYear' => '2022-2023', */
         )];
+
+        
     }
 }
