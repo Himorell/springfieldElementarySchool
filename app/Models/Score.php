@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /** 
  * Class Score
@@ -23,6 +24,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Score extends Model
 {
+
+  use HasFactory;
     
     static $rules = [
 		'id_students' => 'required',
