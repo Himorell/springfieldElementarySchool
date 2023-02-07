@@ -21,30 +21,38 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Id Students:</strong>
-                            {{ $score->id_students }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Mark:</strong>
-                            {{ $score->mark }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Quarter:</strong>
-                            {{ $score->quarter }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Subject:</strong>
-                            {{ $score->subject }}
+                            <strong>Academicyear:</strong>
+                            {{ $score->academicYear }}
                         </div>
                         <div class="form-group">
                             <strong>Course:</strong>
                             {{ $score->course }}
                         </div>
                         <div class="form-group">
-                            <strong>Academicyear:</strong>
-                            {{ $score->academicYear }}
+                            <strong>Subject:</strong>
+                            {{ $score->subject }}
                         </div>
-
+                        <div class="form-group">
+                            <strong>Id Students:</strong>
+                            {{ $score->id_students }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Quarter:</strong>
+                            {{ $score->quarter }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Mark 1:</strong>
+                            {{ $score->mark1 }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Mark 2:</strong>
+                            {{ $score->mark2 }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Mark 3:</strong>
+                            {{ $score->mark3 }}
+                        </div>
+                        
                     </div>
                 </div>
             </div>

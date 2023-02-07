@@ -45,9 +45,10 @@ class ScoreController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Score::$rules);
+        // request()->validate(Score::$rules);
 
         $score = Score::create($request->all());
+        $students = Student::pluck('name','id');
 
         return redirect()->route('scores.index')
             ->with('success', 'Score created successfully.');
@@ -88,7 +89,7 @@ class ScoreController extends Controller
      */
     public function update(Request $request, Score $score)
     {
-        request()->validate(Score::$rules);
+        // request()->validate(Score::$rules);
 
         $score->update($request->all());
 
