@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\ScoreSeeder;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,17 +15,17 @@ class ScoreSeeder extends Seeder
      */
     public function run()
     {   
-        Score::factory()->create[(
-        'id_students' => '1',
+        Score::factory()-> create[(
+         /*    'id_students' => 1, */
 
-		'subject' => 'Maths',
-        'quarter' => 'Second',
-        'mark1' => '7',
-        'mark2' => '6',
-        'mark3' => '8',
+		    'subject' => 'Maths',
+            'quarter' => 'Second',
+            'mark1' => '',
+            'mark2' => '',
+            'mark3' => ''
 
-        'course' => '2',
-		'academicYear' => '2022-2023',
+            /* 'course' => '2',
+		    'academicYear' => '2022-2023', */
         )];
     }
 }
