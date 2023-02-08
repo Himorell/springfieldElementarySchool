@@ -25,6 +25,19 @@ class ScoreController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $scores->perPage());
     }
 
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getSubjectScores()
+    {
+        $scores = Score::where('subject', '=', 'maths')->paginate();
+
+        return view('score.index', compact('scores'))
+            ->with('i', (request()->input('page', 1) - 1) * $scores->perPage());
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -33,7 +46,7 @@ class ScoreController extends Controller
     public function create()
     {
         $score = new Score();
-        $students = Student::pluck('name','surname','id');
+        $students = Student::pluck('name','id');
         return view('score.create', compact('score','students'));
     }
 
