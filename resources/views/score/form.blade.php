@@ -3,7 +3,7 @@
 
         <div class="form-group">
             {{ Form::label('id_students') }}
-            {{ Form::select('id_students', $score, $score->id_students, ['class' => 'form-control' . ($errors->has('id_students') ? ' is-invalid' : ''), 'placeholder' => 'Id Students']) }}
+            {{ Form::select('students', $score, $score->id_students, ['class' => 'form-control' . ($errors->has('id_students') ? ' is-invalid' : ''), 'placeholder' => 'Id Students']) }}
             {!! $errors->first('id_students', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
