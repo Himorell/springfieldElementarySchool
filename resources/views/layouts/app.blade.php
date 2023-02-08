@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Springfield Elementary School') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- CSS -->
     <link href="{{ asset('css/listtudent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/scores.css') }}" rel="stylesheet">
@@ -28,7 +28,6 @@
                     <a class="navbar-brand" href="#">
                         <img src="css/imgwelcome/logo.png" alt="Bootstrap" width="" height="100">
                     </a>
-                    {{ config('app.name', 'Springfield Elementary School') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
