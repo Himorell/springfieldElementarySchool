@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Student
@@ -20,22 +21,19 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Student extends Model
 {
-    
-    static $rules = [
-		'name' => 'required',
-		'surname' => 'required',
-		'email' => 'required',
-    ];
+    use HasFactory;
 
-    protected $perPage = 20;
-
+  
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['name','surname','email','image'];
-
-
+    protected $fillable = [
+      'name',
+      'surname',
+      'email',
+      'image'
+    ];
 
 }

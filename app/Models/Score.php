@@ -3,13 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-/**
+/** 
  * Class Score
  *
  * @property $id
  * @property $id_students
- * @property $mark
+ * @property $mark1
+ * @property $mark2
+ * @property $mark3
  * @property $quarter
  * @property $subject
  * @property $course
@@ -23,24 +26,27 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Score extends Model
 {
-    
-    static $rules = [
-		'id_students' => 'required',
-		'mark' => 'required',
-		'quarter' => 'required',
-		'subject' => 'required',
-		'course' => 'required',
-		'academicYear' => 'required',
-    ];
+  use HasFactory;  
 
-    protected $perPage = 20;
+    // static $rules = [
+		// 'id_students' => 'required',
+		// 'mark1' => 'required',
+    // 'mark2' => 'required',
+    // 'mark3' => 'required',
+		// 'quarter' => 'required',
+		// 'subject' => 'required',
+		// 'course' => 'required',
+		// 'academicYear' => 'required',
+    // ];
+
+    // protected $perPage = 20;
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['id_students','mark','quarter','subject','course','academicYear'];
+    protected $fillable = ['id_students','academicYear','course','subject','quarter','mark1','mark2','mark3',];
 
 
     /**

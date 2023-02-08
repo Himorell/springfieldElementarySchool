@@ -16,11 +16,11 @@
                                 {{ __('Score') }}
                             </span>
 
-                             <div class="float-right">
+                            <div class="float-right">
                                 <a href="{{ route('scores.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                    {{ __('Create New') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -36,12 +36,14 @@
                                     <tr>
                                         <th>No</th>
 
-										<th>Id Students</th>
-										<th>Mark</th>
-										<th>Quarter</th>
-										<th>Subject</th>
-										<th>Course</th>
-										<th>Academicyear</th>
+										<th>Student</th>
+                                        <th>Academicyear</th>
+                                        <th>Course</th>
+                                        <th>Subject</th>
+                                        <th>Quarter</th>
+										<th>Mark 1</th>
+                                        <th>Mark 2</th>
+                                        <th>Mark 3</th>
 
                                         <th></th>
                                     </tr>
@@ -52,11 +54,13 @@
                                             <td>{{ ++$i }}</td>
 
 											<td>{{ $score->student->name }}</td>
-											<td>{{ $score->mark }}</td>
-											<td>{{ $score->quarter }}</td>
-											<td>{{ $score->subject }}</td>
-											<td>{{ $score->course }}</td>
 											<td>{{ $score->academicYear }}</td>
+                                            <td>{{ $score->course }}</td>
+                                            <td>{{ $score->subject }}</td>
+											<td>{{ $score->quarter }}</td>
+											<td>{{ $score->mark1 }}</td>
+											<td>{{ $score->mark2 }}</td>
+											<td>{{ $score->mark3 }}</td>
 
                                             <td>
                                                 <form action="{{ route('scores.destroy',$score->id) }}" method="POST">
@@ -64,7 +68,7 @@
                                                     <a class="btn btn-sm btn-success" href="{{ route('scores.edit',$score->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete this score? {{ $score->alertName}} - ID {{$score->id }}')"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>
