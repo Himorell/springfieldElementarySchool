@@ -54,31 +54,6 @@ class DatabaseSeeder extends Seeder
 
         Student::factory(5)->create();
 
-        // Score::factory()->create([
-            
-        //     'id_students' => '1',
-        //     'academicYear' => '2022/2023',
-        //     'Course' => '1',
-        //     'subject' => 'maths',
-        //     'quarter' => '1',
-        //     'mark1' => '10',
-        //     'mark2' => '9',
-        //     'mark3' => '9',
-        // ]);
-
-        // Score::factory()->create([
-            
-        //     'id_students' => '2',
-        //     'academicYear' => '2022/2023',
-        //     'Course' => '1',
-        //     'subject' => 'maths',
-        //     'quarter' => '1',
-        //     'mark1' => '5',
-        //     'mark2' => '6',
-        //     'mark3' => '4',
-        // ]);
-
-        // Score::factory(5)->create();
 
     }
 
