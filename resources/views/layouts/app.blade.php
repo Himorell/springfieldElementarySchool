@@ -55,10 +55,7 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('students.index') }}">Students</a>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('scores.index') }}">Scores</a>
+                        
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -93,16 +90,22 @@
                         <img src="css/img/skinner.jpg" class="img-rounded">
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
-                          <li class="nav-item">
-                            <a href="#" class="nav-link active" aria-current="page">
-                              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-                              Home
+                            <li class="nav-item">
+                            <a href="{{route('home')}}" class="nav-link active" aria-current="page">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                            Home
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="nav-link text-white">
+                            <a href="{{ route('students.index') }}" class="nav-link text-white">
                               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
                               Students
+                            </a>
+                          </li>
+                          <li>
+                            <a href="{{ route('scores.index') }}" class="nav-link text-white">
+                              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                              Scores
                             </a>
                           </li>
                           <li>

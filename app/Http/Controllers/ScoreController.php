@@ -89,8 +89,8 @@ class ScoreController extends Controller
     public function edit($id)
     {
         $score = Score::find($id);
-
-        return view('score.edit', compact('score'));
+        $students = Student::pluck('name','id');
+        return view('score.edit', compact('score', 'students'));
     }
 
     /**
