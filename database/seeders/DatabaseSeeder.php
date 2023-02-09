@@ -24,21 +24,28 @@ class DatabaseSeeder extends Seeder
             'name' => 'Lisa',
             'surname' => 'Simpson',
             'email' => 'lisa@mail.com',
-            'image' => '',
+            'image' => 'https://7televalencia.com/wp-content/uploads/2019/04/lisasimpsonnok.jpg',
         ]);
 
         Student::factory()->create([
             'name' => 'Bart',
             'surname' => 'Simpson',
             'email' => 'bart@mail.com',
-            'image' => '',
+            'image' => 'https://comodibujarclub.com/wp-content/uploads/2020/10/dibujar-a-bart-simpson.png',
+        ]);
+
+        Student::factory()->create([
+            'name' => 'Milhouse',
+            'surname' => 'Van Houten',
+            'email' => 'milhouse@mail.com',
+            'image' => 'https://www.prensalibre.com/wp-content/uploads/2021/06/milhouse-02.png',
         ]);
         // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Celia Millan',
+            'email' => 'teacher@springfield.com',
+        ]);
         Student::factory(5)->create();
 
 

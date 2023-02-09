@@ -39,7 +39,6 @@
 										<th>Name</th>
 										<th>Surname</th>
 										<th>Email</th>
-										<th>Image</th>
 
                                         <th></th>
                                     </tr>
@@ -52,7 +51,7 @@
 											<td>{{ $student->name }}</td>
 											<td>{{ $student->surname }}</td>
 											<td>{{ $student->email }}</td>
-											<td>{{ $student->image }}</td>
+											
 
                                             <td>
                                                 <form action="{{ route('students.destroy',$student->id) }}" method="POST">
