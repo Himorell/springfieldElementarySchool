@@ -52,7 +52,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'lisa@springfield.com',
         ]); 
 
-
         Student::factory(5)->create();
 
         // Score::factory()->create([
