@@ -55,7 +55,6 @@ class DatabaseSeeder extends Seeder
 
         Student::factory(5)->create();
 
-
         // Score::factory()->create([
             
         //     'id_students' => '1',
