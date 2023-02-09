@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'Lisa Simpson',
             'email' => 'lisa@springfield.com',
-        ]);
+        ]); 
 
 
         Student::factory(5)->create();
