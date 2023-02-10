@@ -7,9 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" type="image/png" sizes="512x512" href="{{ asset('/images/logo.png') }}">
-    <title>{{ config('app.name', 'Springfield Elementary School') }}</title>
+    <title>{{ ('Springfield Elementary School') }}</title>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- CSS -->
     <link href="{{ asset('css/listtudent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/scores.css') }}" rel="stylesheet">
