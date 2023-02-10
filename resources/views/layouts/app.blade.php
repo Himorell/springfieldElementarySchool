@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" sizes="512x512" href="{{ asset('/images/logo.png') }}">
     <title>{{ ('Springfield Elementary School') }}</title>
 
+    
     <!-- CSS -->
     <link href="{{ asset('css/listtudent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/scores.css') }}" rel="stylesheet">
