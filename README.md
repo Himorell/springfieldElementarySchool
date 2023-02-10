@@ -53,7 +53,7 @@
 
 <h2>4. Atomic Design</h2> 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
-<img style="width:250px; height:400px; margin:12px" src="public/images/Atomic Simpsons (1).png" alt="Atomic Design"/>
+<img style="width:250px; height:400px; margin:12px" src="public/css/img/Atomic Simpsons (1).png" alt="Atomic Design"/>
 </div>
 
 <h2>5. Final Design</h2> 
@@ -61,7 +61,7 @@
 
 | Login |  Student Section |  Subject Section|  Student view | 
 | --- | --- | --- | --- | 
-| <img style="width:150px;" src="public/images/Login Principal .png" alt="Login"/> | <img style="width:150px;" src="public/images/Home Teacher -  Students Section.png" alt=""/> | <img style="width:150px;" src="public/images/Home Teacher - Materias Section.png" alt=""/> |  <img style="width:150px;" src="public/images/Home Teacher - Student Show view.png" alt=" Student Show view"/> | 
+| <img style="width:150px;" src="public/css/img/Login Principal .png" alt="Login"/> | <img style="width:150px;" src="public/css/img/Home Teacher -  Students Section.png" alt=""/> | <img style="width:150px;" src="public/css/img/Home Teacher - Materias Section.png" alt=""/> |  <img style="width:150px;" src="public/css/img/Home Teacher - Student Show view.png"/> | 
 
 </div>
 
