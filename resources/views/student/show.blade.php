@@ -19,7 +19,9 @@
                     </div>
 
                     <div class="card-body">
-                        
+                        <div class="form-group" >
+                            <img width= 150px src="{{ $student->image }}" alt="Student Image">
+                        </div>
                         <div class="form-group">
                             <strong>Name:</strong>
                             {{ $student->name }}
@@ -32,10 +34,7 @@
                             <strong>Email:</strong>
                             {{ $student->email }}
                         </div>
-                        <div class="form-group">
-                            <strong>Image:</strong>
-                            {{ $student->image }}
-                        </div>
+                        
 
                     </div>
                 </div>

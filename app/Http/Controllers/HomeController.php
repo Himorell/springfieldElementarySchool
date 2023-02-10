@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Score;
+use App\Models\Student;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $scores = Score::where('subject', '=', 'maths')->paginate();
+
+        return view('home', compact('scores'))
+            ->with('i', (request()->input('page', 1) - 1) * $scores->perPage());
     }
 }

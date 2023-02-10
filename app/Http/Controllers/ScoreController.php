@@ -25,6 +25,19 @@ class ScoreController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $scores->perPage());
     }
 
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getSubjectScores()
+    {
+        $scores = Score::where('subject', '=', 'maths')->paginate();
+
+        return view('score.index', compact('scores'))
+            ->with('i', (request()->input('page', 1) - 1) * $scores->perPage());
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -45,9 +58,10 @@ class ScoreController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Score::$rules);
+        // request()->validate(Score::$rules);
 
         $score = Score::create($request->all());
+        $students = Student::pluck('name','id');
 
         return redirect()->route('scores.index')
             ->with('success', 'Score created successfully.');
@@ -75,8 +89,8 @@ class ScoreController extends Controller
     public function edit($id)
     {
         $score = Score::find($id);
-
-        return view('score.edit', compact('score'));
+        $students = Student::pluck('name','id');
+        return view('score.edit', compact('score', 'students'));
     }
 
     /**
@@ -88,7 +102,7 @@ class ScoreController extends Controller
      */
     public function update(Request $request, Score $score)
     {
-        request()->validate(Score::$rules);
+        // request()->validate(Score::$rules);
 
         $score->update($request->all());
 
