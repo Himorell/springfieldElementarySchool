@@ -25,7 +25,7 @@ return new class extends Migration
             $table->integer('mark1');
             $table->integer('mark2');
             $table->integer('mark3');
-            //$table->integer('exam');
+            $table->integer('average');
 
             $table->timestamps();
         });
