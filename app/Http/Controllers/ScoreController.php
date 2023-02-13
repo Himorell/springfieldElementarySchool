@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Score;
-use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 /**
@@ -46,8 +46,8 @@ class ScoreController extends Controller
     public function create()
     {
         $score = new Score();
-        $students = Student::pluck('name','id');
-        return view('score.create', compact('score','students'));
+        $users = User::pluck('name','id');
+        return view('score.create', compact('score','users'));
     }
 
     /**
@@ -61,7 +61,7 @@ class ScoreController extends Controller
         // request()->validate(Score::$rules);
 
         $score = Score::create($request->all());
-        $students = Student::pluck('name','id');
+        $users = User::pluck('name','id');
 
         return redirect()->route('scores.index')
             ->with('success', 'Score created successfully.');
@@ -89,8 +89,8 @@ class ScoreController extends Controller
     public function edit($id)
     {
         $score = Score::find($id);
-        $students = Student::pluck('name','id');
-        return view('score.edit', compact('score', 'students'));
+        $users = User::pluck('name','id');
+        return view('score.edit', compact('score', 'users'));
     }
 
     /**

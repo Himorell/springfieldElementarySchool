@@ -17,9 +17,9 @@
             {!! $errors->first('subject', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('id_students') }}
-            {{ Form::select('id_students', $students, $score->id_students, ['class' => 'form-control' . ($errors->has('id_students') ? ' is-invalid' : ''), 'placeholder' => 'Id Students']) }}
-            {!! $errors->first('id_students', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::label('id_users') }}
+            {{ Form::select('id_users', $users, $score->id_users, ['class' => 'form-control' . ($errors->has('id_users') ? ' is-invalid' : ''), 'placeholder' => 'Id users']) }}
+            {!! $errors->first('id_users', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('quarter') }}

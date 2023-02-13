@@ -3,11 +3,11 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use App\Models\Student;
+use App\Models\User;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class CRUDStudentTest extends TestCase
+class CRUDUserTest extends TestCase
 {
     /**
      * A basic feature test example.
@@ -23,60 +23,61 @@ class CRUDStudentTest extends TestCase
     } */
 
 
-    public function test_listStudentAppearInStudentView() {
+    public function test_listStudentsAppearInUserView() {
         $this->withExceptionHandling();
         
-        $students = Student::factory(2)->create();
-        $student = $students[0];
-        $response = $this->get(route('students.index'));
-        $response->assertSee($student->name);
-        $response->assertStatus(200)->assertViewIs('student.index');
+        $users = User::factory(2)->create();
+        $user = $users[0];
+        $response = $this->get(route('users.index'));
+        $response->assertSee($user->name);
+        $response->assertStatus(200)->assertViewIs('user.index');
         
     }
 
-    public function test_aStudentCanBeCreated(){
+    public function test_anUserCanBeCreated(){
         $this->withExceptionHandling();
 
-        $student = Student::factory()->create();
+        $user = User::factory()->create();
         $response = $this->post(route ('home'),
         [
             'name' => 'name',
             'surname' => 'surname',
             'email' => 'email',
+            'password' => 'password',
             'image' => 'image',
         ]);
 
-        $this->assertCount(1,Student::all()); 
+        $this->assertCount(1,User::all()); 
     }
 
-    public function test_aStudentCanBeDeleted() {
+    public function test_anUserCanBeDeleted() {
         $this->withExceptionHandling();
 
-        $student = Student::factory()->create();
-        $this->assertCount(1, Student::all());
+        $user = User::factory()->create();
+        $this->assertCount(1, User::all());
 
-        $response = $this->delete(route('students.destroy', $student->id));
-        $this->assertCount(0, Student::all());
+        $response = $this->delete(route('users.destroy', $user->id));
+        $this->assertCount(0, User::all());
     }
 
-    public function test_aStudentCanBeUpdated(){
+    public function test_anUserCanBeUpdated(){
         $this->withExceptionHandling();
 
-        $student= Student::factory()->create();
-        $this->assertCount(1,Student::all());
+        $user= User::factory()->create();
+        $this->assertCount(1,User::all());
 
-        $response=$this->patch(route('students.update',$student->id), ['name'=>'New name']);
-        $this->assertEquals('New name', Student::first()->name);
+        $response=$this->patch(route('users.update',$user->id), ['name'=>'New name']);
+        $this->assertEquals('New name', User::first()->name);
 
     }
 
-    public function test_aStudentCanBeShowed(){
+    public function test_anUserCanBeShowed(){
         $this->withExceptionHandling();
-        $student=Student::factory()->create();
-        $this->assertCount(1,Student::all());
-        $response=$this->get(route('students.show', $student->id));
-        $response->assertSee($student->name);
-        $response->assertSuccessful(200)->assertViewIs('student.show');
+        $user=User::factory()->create();
+        $this->assertCount(1,User::all());
+        $response=$this->get(route('users.show', $user->id));
+        $response->assertSee($user->name);
+        $response->assertSuccessful(200)->assertViewIs('user.show');
     }
 
 }

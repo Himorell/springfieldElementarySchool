@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
 
-										<th>Student</th>
+										<th>user</th>
                                         <th>Academicyear</th>
                                         <th>Course</th>
                                         <th>Subject</th>
@@ -53,7 +53,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
-											<td>{{ $score->student->name }}</td>
+											<td>{{ $score->user->name }}</td>
 											<td>{{ $score->academicYear }}</td>
                                             <td>{{ $score->course }}</td>
                                             <td>{{ $score->subject }}</td>

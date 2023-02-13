@@ -8,11 +8,11 @@
     
     <div class="col-md-10 p-3">
         <div class="container">
-        <h2 class="text-center mb-3"> Students Sumary</h2>
+        <h2 class="text-center mb-3"> users Sumary</h2>
         <table class="table text-bg-warning">
             <tr>
                 <th>
-                    Student</th>
+                    user</th>
                     <th>
                         Language Mark</th>
                         <th>

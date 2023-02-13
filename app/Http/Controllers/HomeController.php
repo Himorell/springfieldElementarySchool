@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Score;
-use App\Models\Student;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 

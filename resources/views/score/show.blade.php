@@ -33,8 +33,8 @@
                             {{ $score->subject }}
                         </div>
                         <div class="form-group">
-                            <strong>Id Students:</strong>
-                            {{ $score->id_students }}
+                            <strong>Id users:</strong>
+                            {{ $score->id_users }}
                         </div>
                         <div class="form-group">
                             <strong>Quarter:</strong>

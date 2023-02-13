@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('scores', function (Blueprint $table) {
             $table->id();
             
-            $table->unsignedBigInteger('id_students');
-            $table->foreign('id_students')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('id_users');
+            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('academicYear')->default('2023');
             $table->integer('course');
             $table->string('subject');

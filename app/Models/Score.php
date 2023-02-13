@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * Class Score
  *
  * @property $id
- * @property $id_students
+ * @property $id_users
  * @property $mark1
  * @property $mark2
  * @property $mark3
@@ -20,7 +20,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property $created_at
  * @property $updated_at
  *
- * @property Student $student
+ * @property user $user
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -29,7 +29,7 @@ class Score extends Model
   use HasFactory;  
 
     // static $rules = [
-		// 'id_students' => 'required',
+		// 'id_users' => 'required',
 		// 'mark1' => 'required',
     // 'mark2' => 'required',
     // 'mark3' => 'required',
@@ -46,15 +46,15 @@ class Score extends Model
      *
      * @var array
      */
-    protected $fillable = ['id_students','academicYear','course','subject','quarter','mark1','mark2','mark3',];
+    protected $fillable = ['id_users','academicYear','course','subject','quarter','mark1','mark2','mark3',];
 
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function student()
+    public function user()
     {
-        return $this->hasOne('App\Models\Student', 'id', 'id_students');
+        return $this->hasOne('App\Models\user', 'id', 'id_users');
     }
     
 

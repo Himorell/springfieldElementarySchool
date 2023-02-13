@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $student->name ?? 'Show Student' }}
+    {{ $user->name ?? 'Show user' }}
 @endsection
 
 @section('content')
@@ -11,28 +11,28 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Student</span>
+                            <span class="card-title">Show user</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('students.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         <div class="form-group" >
-                            <img width= 150px src="{{ $student->image }}" alt="Student Image">
+                            <img width= 150px src="{{ $user->image }}" alt="user Image">
                         </div>
                         <div class="form-group">
                             <strong>Name:</strong>
-                            {{ $student->name }}
+                            {{ $user->name }}
                         </div>
                         <div class="form-group">
                             <strong>Surname:</strong>
-                            {{ $student->surname }}
+                            {{ $user->surname }}
                         </div>
                         <div class="form-group">
                             <strong>Email:</strong>
-                            {{ $student->email }}
+                            {{ $user->email }}
                         </div>
                         
 

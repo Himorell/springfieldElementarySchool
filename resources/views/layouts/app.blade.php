@@ -99,9 +99,9 @@
                             </a>
                           </li>
                           <li>
-                            <a href="{{ route('students.index') }}" class="nav-link text-white">
+                            <a href="{{ route('users.index') }}" class="nav-link text-white">
                               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                              Students
+                              users
                             </a>
                           </li>
                           <li>

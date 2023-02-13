@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Create Student
+    Create user
 @endsection
 
 @section('content')
@@ -13,13 +13,13 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Student</span>
+                        <span class="card-title">Create user</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('students.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('users.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('student.form')
+                            @include('user.form')
 
                         </form>
                     </div>

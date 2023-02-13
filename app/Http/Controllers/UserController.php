@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 /**
- * Class StudentController
+ * Class UserController
  * @package App\Http\Controllers
  */
-class StudentController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +18,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::paginate();
+        $users = User::paginate();
 
-        return view('student.index', compact('students'))
-            ->with('i', (request()->input('page', 1) - 1) * $students->perPage());
+        return view('user.index', compact('users'))
+            ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
 
     /**
@@ -31,8 +31,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        $student = new Student();
-        return view('student.create', compact('student'));
+        $user = new User();
+        return view('user.create', compact('user'));
     }
 
     /**
@@ -45,10 +45,10 @@ class StudentController extends Controller
     {
         
 
-        $student = Student::create($request->all());
+        $user = User::create($request->all());
 
-        return redirect()->route('students.index')
-            ->with('success', 'Student created successfully.');
+        return redirect()->route('users.index')
+            ->with('success', 'user created successfully.');
     }
 
     /**
@@ -59,9 +59,9 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        $student = Student::find($id);
+        $user = User::find($id);
 
-        return view('student.show', compact('student'));
+        return view('user.show', compact('user'));
     }
 
     /**
@@ -72,26 +72,26 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        $student = Student::find($id);
+        $User = User::find($id);
 
-        return view('student.edit', compact('student'));
+        return view('user.edit', compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  Student $student
+     * @param  User $User
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request, User $user)
     {
         
 
-        $student->update($request->all());
+        $user->update($request->all());
 
-        return redirect()->route('students.index')
-            ->with('success', 'Student updated successfully');
+        return redirect()->route('users.index')
+            ->with('success', 'User updated successfully');
     }
 
     /**
@@ -101,9 +101,9 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        $student = Student::find($id)->delete();
+        $user = User::find($id)->delete();
 
-        return redirect()->route('students.index')
-            ->with('success', 'Student deleted successfully');
+        return redirect()->route('users.index')
+            ->with('success', 'User deleted successfully');
     }
 }
