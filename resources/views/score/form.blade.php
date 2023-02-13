@@ -42,7 +42,7 @@
             {!! $errors->first('mark3', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('average', 'Average') }}
+            {{ Form::label('average'/* , 'Average' */) }}
             {{ Form::text('average', $score->average, ['class' => 'form-control' . ($errors->has('average') ? '
             is-invalid' : ''), 'placeholder' => 'Average']) }}
             {!! $errors->first('average', '<div class="invalid-feedback">:message</div>') !!}

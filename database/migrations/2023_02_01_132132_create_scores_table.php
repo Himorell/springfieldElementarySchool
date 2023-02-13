@@ -22,10 +22,10 @@ return new class extends Migration
             $table->integer('course');
             $table->string('subject');
             $table->integer('quarter');
-            $table->integer('mark1');
-            $table->integer('mark2');
-            $table->integer('mark3');
-            $table->integer('average');
+            $table->integer('mark1')->nullable();
+            $table->integer('mark2')->nullable();
+            $table->integer('mark3')->nullable();
+            $table->integer('average')->nullable();
 
             $table->timestamps();
         });

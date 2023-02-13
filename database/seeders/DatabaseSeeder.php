@@ -65,6 +65,7 @@ class DatabaseSeeder extends Seeder
         //     'mark1' => '10',
         //     'mark2' => '9',
         //     'mark3' => '9',
+        //     'average' => '',
         // ]);
 
         // Score::factory()->create([
