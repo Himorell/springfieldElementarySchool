@@ -41,6 +41,12 @@
             {{ Form::text('mark3', $score->mark3, ['id' => 'mark3','class' => 'form-control' . ($errors->has('mark3') ? ' is-invalid' : ''), 'placeholder' => 'Mark3']) }}
             {!! $errors->first('mark3', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        <div class="form-group">
+            {{ Form::label('average', 'Average') }}
+            {{ Form::text('average', $score->average, ['class' => 'form-control' . ($errors->has('average') ? '
+            is-invalid' : ''), 'placeholder' => 'Average']) }}
+            {!! $errors->first('average', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary"onclick="return confirm('Are you sure to submit this score? {{ $score->alertName}} - ID {{$score->id }}')">Submit</button>
     </div>
