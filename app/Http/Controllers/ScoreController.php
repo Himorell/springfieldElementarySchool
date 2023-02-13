@@ -60,6 +60,8 @@ class ScoreController extends Controller
     {
         // request()->validate(Score::$rules);
 
+        /* $average = $request->input('average'); */ //Con esto te traes el resultado de la media del formulario
+
         $score = Score::create($request->all());
         $students = Student::pluck('name','id');
 
@@ -122,4 +124,5 @@ class ScoreController extends Controller
         return redirect()->route('scores.index')
             ->with('success', 'Score deleted successfully');
     }
+
 }

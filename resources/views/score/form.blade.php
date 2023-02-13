@@ -28,17 +28,17 @@
         </div>
         <div class="form-group">
             {{ Form::label('mark 1') }}
-            {{ Form::text('mark1', $score->mark1, ['class' => 'form-control' . ($errors->has('mark1') ? ' is-invalid' : ''), 'placeholder' => 'Mark1']) }}
+            {{ Form::text('mark1', $score->mark1, ['id' => 'mark1','class' => 'form-control' . ($errors->has('mark1') ? ' is-invalid' : ''), 'placeholder' => 'Mark1']) }}
             {!! $errors->first('mark1', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('mark 2') }}
-            {{ Form::text('mark2', $score->mark2, ['class' => 'form-control' . ($errors->has('mark2') ? ' is-invalid' : ''), 'placeholder' => 'Mark2']) }}
+            {{ Form::text('mark2', $score->mark2, ['id' => 'mark2','class' => 'form-control' . ($errors->has('mark2') ? ' is-invalid' : ''), 'placeholder' => 'Mark2']) }}
             {!! $errors->first('mark2', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('mark 3') }}
-            {{ Form::text('mark3', $score->mark3, ['class' => 'form-control' . ($errors->has('mark3') ? ' is-invalid' : ''), 'placeholder' => 'Mark3']) }}
+            {{ Form::text('mark3', $score->mark3, ['id' => 'mark3','class' => 'form-control' . ($errors->has('mark3') ? ' is-invalid' : ''), 'placeholder' => 'Mark3']) }}
             {!! $errors->first('mark3', '<div class="invalid-feedback">:message</div>') !!}
         </div>
     <div class="box-footer mt20">
