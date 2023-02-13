@@ -46,7 +46,7 @@ class Score extends Model
      *
      * @var array
      */
-    protected $fillable = ['id_students','academicYear','course','subject','quarter','mark1','mark2','mark3',];
+    protected $fillable = ['id_students','academicYear','course','subject','quarter','mark1','mark2','mark3', 'average'];
 
 
     /**

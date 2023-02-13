@@ -28,6 +28,7 @@ class ScoreFactory extends Factory
             // 'mark1' => $this->faker->biasedNumberBetween($min = 1, $max = 10, $function = 'sqrt'),
             // 'mark2' => $this->faker->biasedNumberBetween($min = 1, $max = 10, $function = 'sqrt'),
             // 'mark3' => $this->faker->biasedNumberBetween($min = 1, $max = 10, $function = 'sqrt'),
+            // 'average' => $this->faker->biasedNumberBetween($min = 1, $max = 10, $function = 'sqtr'),
         ];
     }
 }
