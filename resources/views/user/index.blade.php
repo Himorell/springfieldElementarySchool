@@ -48,11 +48,10 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
-											<td>{{ $user->name }}</td>
-											<td>{{ $user->surname }}</td>
+											<td><img style="width:50px" src="{{ $user->image }}" alt="User image"></td>
+                                            <td>{{ $user->name }}</td>
 											<td>{{ $user->email }}</td>
 											
-
                                             <td>
                                                 <form action="{{ route('users.destroy',$user->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('users.show',$user->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
