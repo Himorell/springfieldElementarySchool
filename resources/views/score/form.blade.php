@@ -12,20 +12,44 @@
             {!! $errors->first('course', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            <label for="quarter" class="col-md-4 col-form-label">Subject</label>
+            <div class="col-md-6">
+                <select name="quarter" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option value="" disabled selected>Choose a option...</option>
+                    <option value="Maths">Maths</option>
+                    <option value="Language">Language</option>
+                    <option value="Biology">Biology</option>
+                    <option value="History">History</option>
+                    <option value="Art">Art</option>
+                </select>
+            </div>
+        </div>
+        {{-- <div class="form-group">
             {{ Form::label('subject') }}
             {{ Form::text('subject', $score->subject, ['class' => 'form-control' . ($errors->has('subject') ? ' is-invalid' : ''), 'placeholder' => 'Subject']) }}
             {!! $errors->first('subject', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+        </div> --}}
         <div class="form-group">
             {{ Form::label('id_users') }}
             {{ Form::select('id_users', $users, $score->id_users, ['class' => 'form-control' . ($errors->has('id_users') ? ' is-invalid' : ''), 'placeholder' => 'Id users']) }}
             {!! $errors->first('id_users', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            <label for="quarter" class="col-md-4 col-form-label">Quarter</label>
+            <div class="col-md-6">
+                <select name="quarter" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option value="" disabled selected>Choose a option...</option>
+                    <option value="1">1st Quarter</option>
+                    <option value="2">2nd Quarter</option>
+                    <option value="2">3rd Quarter</option>
+                </select>
+            </div>
+        </div>
+        {{-- <div class="form-group">
             {{ Form::label('quarter') }}
             {{ Form::text('quarter', $score->quarter, ['class' => 'form-control' . ($errors->has('quarter') ? ' is-invalid' : ''), 'placeholder' => 'Quarter']) }}
             {!! $errors->first('quarter', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+        </div> --}}
         <div class="form-group">
             {{ Form::label('mark 1') }}
             {{ Form::text('mark1', $score->mark1, ['class' => 'form-control' . ($errors->has('mark1') ? ' is-invalid' : ''), 'placeholder' => 'Mark1']) }}

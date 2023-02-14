@@ -20,8 +20,8 @@ return new class extends Migration
             $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('academicYear')->default('2023');
             $table->integer('course');
-            $table->string('subject')->enum('subject',['Maths','Language','Biology','History','Art',]);
-            $table->integer('quarter')->enum('quarter',['1','2','3']);
+            $table->string('subject')->enum('subject',['maths','language','biology','history','art',]);
+            $table->integer('quarter')->enum('quarter',[1,2,3]);
             $table->integer('mark1');
             $table->integer('mark2');
             $table->integer('mark3');
