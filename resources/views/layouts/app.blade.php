@@ -107,7 +107,7 @@
                             <li>
                                 <div class="dropdown">
                                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="css/img/skinner.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                                        <img src="css/img/booksIcon.png" alt="" width="32" height="32" class="rounded-circle me-2">
                                         <strong>Subjects</strong>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
