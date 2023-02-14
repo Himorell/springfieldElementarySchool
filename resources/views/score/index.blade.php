@@ -12,6 +12,15 @@
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
+                            <div class="col-md-6">
+                                <select name="quarter" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option value="" disabled selected>Choose a option...</option>
+                                    <option value="1">1st Quarter</option>
+                                    <option value="2">2nd Quarter</option>
+                                    <option value="3">3rd Quarter</option>
+                                </select>
+                            </div>
+
                             <span id="card_title">
                                 {{ __('Score') }}
                             </span>

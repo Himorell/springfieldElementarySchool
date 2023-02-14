@@ -91,41 +91,35 @@
                     <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-warning" style="width: 260px; height:600px;">
                         <img src="css/img/skinner.jpg" class="img-rounded">
                         <hr>
-                        <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item">
-                            <a href="{{route('home')}}" class="nav-link active" aria-current="page">
-                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-                            Home
-                            </a>
-                          </li>
-                          <li>
-                            <a href="{{ route('users.index') }}" class="nav-link text-white">
-                              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                              users
-                            </a>
-                          </li>
-                          <li>
-                            <a href="{{ route('scores.index') }}" class="nav-link text-white">
-                              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                              Scores
-                            </a>
-                          </li>
-                          <li>
-                              <div class="dropdown">
-                                  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="css/img/skinner.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
-                                    <strong>Subjects</strong>
-                                  </a>
-                                  <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                                    <li><a class="dropdown-item" href="#">Language</a></li>
-                                    <li><a class="dropdown-item" href="#">Maths</a></li>
-                                    <li><a class="dropdown-item" href="#">Music</a></li>
-                                    <li><a class="dropdown-item" href="#">Art</a></li>
-                                    <li><a class="dropdown-item" href="#">Biology</a></li>
-                                  </ul>
-                            </div>
-                        </li>
-                        </ul>
+                            <ul class="nav nav-pills flex-column mb-auto">
+                                <li class="nav-item">
+                                <a href="{{route('home')}}" class="nav-link active" aria-current="page">
+                                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                                <strong>Home</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('users.index') }}" class="nav-link text-white">
+                                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                                    <strong>Users</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="css/img/skinner.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                                        <strong>Subjects</strong>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                        <li><a class="dropdown-item" href="{{ route('scores.index') }}">Maths</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('scores.index') }}">Language</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('scores.index') }}">Biology</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('scores.index') }}">History</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('scores.index') }}">Art</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            </ul>
                         <hr>
                     </div>
                 </div>
@@ -133,10 +127,8 @@
                     @yield('content')
                 </div>
             </div>
-            
         </main>
         @endguest
-        
     </div>
 </body>
 </html>
