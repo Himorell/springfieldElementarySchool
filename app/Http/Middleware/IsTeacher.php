@@ -28,7 +28,7 @@ class IsTeacher
     public function handle(Request $request, Closure $next)
     {
 
-        if ($this->auth->user()->type != 'teacher') {
+        if ($this->auth->user()->typeUser != 'teacher') {
             
 
             
