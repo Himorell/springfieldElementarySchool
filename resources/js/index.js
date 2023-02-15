@@ -1,9 +1,9 @@
 let button_photo = document.querySelector('#btn-photo');
 let image = document.querySelector('#user-photo');
 
-let widGet_cloudinary = cloudinary.createUploadWidget({
-    cloudName : '',
-    uploadPreset: '',
+let widget_cloudinary = cloudinary.createUploadWidget({
+    cloudName : 'dnzjflbyz',
+    uploadPreset: 'aoypxuf3',
 
 }, (err, result)=>{
     if(!err && result && result.event === 'success'){
@@ -13,5 +13,5 @@ let widGet_cloudinary = cloudinary.createUploadWidget({
 });
 
 button_photo.addEventListener('click', ()=>{
-    widGet_cloudinary.open();
+    widget_cloudinary.open();
 }, false);

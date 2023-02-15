@@ -31,8 +31,6 @@
     </div>
 </div>
 
-<script src="
-
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
 
 <script src="index.js"></script>
