@@ -17,6 +17,8 @@
             {!! $errors->first('email', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            <img id="user-photo"  src=""></img>
+            <button type="button" id="btn-photo">Upload Photo</button>
             {{ Form::label('image') }}
             {{ Form::text('image', $student->image, ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Image']) }}
             {!! $errors->first('image', '<div class="invalid-feedback">:message</div>') !!}
@@ -28,3 +30,9 @@
         onclick="return confirm('Are you sure to submit? {{ $student->alertName}} - ID {{$student->id }}')">Submit</button>
     </div>
 </div>
+
+<script src="
+
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
+<script src="index.js"></script>
