@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Cloudinary;
 
 /**
  * Class StudentController
@@ -105,5 +106,30 @@ class StudentController extends Controller
 
         return redirect()->route('students.index')
             ->with('success', 'Student deleted successfully');
+    }
+
+ /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  Student $student
+     * @return \Illuminate\Http\Response
+     */
+
+    public function uploadImage(Request $request) {
+
+        if ($request->hasFile('image')) {
+
+            $file = $request->file('image');
+
+            \Cloudinary::config(array(
+                "cloud_name" =>"nzjflbyz",
+                "api_key" => "538186616621336",
+                "api_secret" => "-ClbHTso7_lwrIqn4uRKi-wOAPM"
+            ));
+
+            $upload = \Cloudinary\Uploader::upload($file);
+            return $upload['secure_url'];
+        }
     }
 }
