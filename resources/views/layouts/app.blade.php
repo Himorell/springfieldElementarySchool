@@ -6,10 +6,10 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" type="image/png" sizes="512x512" href="{{ asset('/images/logo.png') }}">
+    <link rel="shortcut icon" type="image/png" sizes="512x512" href="{{ asset('/images/favicon.png') }}">
     <title>{{ ('Springfield Elementary School') }}</title>
 
-    
+
     <!-- CSS -->
     <link href="{{ asset('css/listtudent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/scores.css') }}" rel="stylesheet">
@@ -57,7 +57,7 @@
                                 </li>
                             @endif
                         @else
-                        
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -133,10 +133,10 @@
                     @yield('content')
                 </div>
             </div>
-            
+
         </main>
         @endguest
-        
+
     </div>
 </body>
 </html>
