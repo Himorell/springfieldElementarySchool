@@ -17,7 +17,7 @@
             {!! $errors->first('email', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            <img id="user-photo"  src=""></img>
+            <img id="{{-- user-photo --}}image"  src=""></img>
             <button type="button" id="btn-photo">Upload Photo</button>
             {{ Form::label('image') }}
             {{ Form::text('image', $student->image, ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Image']) }}

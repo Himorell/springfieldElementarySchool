@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
@@ -26,9 +29,16 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        }
+            "Database\\Seeders\\": "database/seeders",
+            "Database\\Factories\\": "database/factories"
+        },
+        "files": [
+            "vendor/cloudinary/cloudinary_php/src/Cloudinary.php"
+        ],
+        "exclude-from-classmap": [
+            "vendor/cloudinary/cloudinary_php/tests",
+            "vendor/cloudinary/cloudinary_php/docs"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
