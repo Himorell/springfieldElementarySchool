@@ -15,18 +15,15 @@ return new class extends Migration
     {
         Schema::create('scores', function (Blueprint $table) {
             $table->id();
-            
-            $table->unsignedBigInteger('id_users');
-            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('academicYear')->default('2023');
+            $table->unsignedBigInteger('users_id');
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('academicYear');
             $table->integer('course');
-            $table->string('subject')->enum('subject',['maths','language','biology','history','art',]);
-            $table->integer('quarter')->enum('quarter',[1,2,3]);
+            $table->string('subject');
+            $table->integer('quarter');
             $table->integer('mark1');
             $table->integer('mark2');
             $table->integer('mark3');
-            //$table->integer('exam');
-
             $table->timestamps();
         });
     }

@@ -27,19 +27,19 @@ class DatabaseSeeder extends Seeder
             'name' => 'Lisa Simpson',
             'email' => 'lisa@springfield.com',
             'image' => 'https://7televalencia.com/wp-content/uploads/2019/04/lisasimpsonnok.jpg',
-        ])->assignRole('student');
+        ])->assignRole('Student');
 
         User::factory()->create([
             'name' => 'Bart Simpson',
             'email' => 'bart@springfield.com',
             'image' => 'https://comodibujarclub.com/wp-content/uploads/2020/10/dibujar-a-bart-simpson.png',
-        ])->assignRole('student');
+        ])->assignRole('Student');
 
         User::factory()->create([
             'name' => 'Milhouse Van Houten',
             'email' => 'milhouse@springfield.com',
             'image' => 'https://www.prensalibre.com/wp-content/uploads/2021/06/milhouse-02.png',
-        ])->assignRole('student');
+        ])->assignRole('Student');
         // \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'teacher@springfield.com',
         ])->assignRole('teacher');
 
-        User::factory(5)->create();
+        // User::factory(5)->create();
 
     }
 
