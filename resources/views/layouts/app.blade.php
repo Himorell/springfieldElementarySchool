@@ -24,11 +24,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm opacity-75" >
+        <nav class="navbar navbar-expand-md" >
             <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <a class="navbar-brand" href="#">
-                        <img src="css/imgwelcome/logo.png" alt="Logo Springfield Elementary School" width="" height="200">
+                        <img src="css/imgwelcome/logo.png" alt="Logo Springfield Elementary School" width="" height="150">
                     </a>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -88,7 +88,7 @@
         <main class="py-0">
             <div class="row">
                 <div class="col-md-2">
-                    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-warning" style="width: 260px; height:600px;">
+                    <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 260px; height:600px; background-color: #B5A2E1">
                         <img src="css/img/skinner.jpg" class="img-rounded">
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
