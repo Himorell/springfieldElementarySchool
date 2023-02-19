@@ -62,7 +62,7 @@
 											<td>{{ $score->mark1 }}</td>
 											<td>{{ $score->mark2 }}</td>
 											<td>{{ $score->mark3 }}</td>
-											<td>{{ round(($score->mark1 + $score->mark2 + $score->mark3) / 3, 1) }}</td>
+											<td>{{ $score->average }}</td>
 
                                             <td>
                                                 <form action="{{ route('scores.destroy',$score->id) }}" method="POST">

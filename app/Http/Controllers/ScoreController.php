@@ -21,6 +21,15 @@ class ScoreController extends Controller
     {
         $scores = Score::paginate();
 
+        foreach($scores as $score) {
+            if ($score->mark2) {
+                $score->average = round(($score->mark1 + $score->mark2) / 2, 1);
+            }
+            if ($score->mark3) {
+                $score->average = round(($score->mark1 + $score->mark2 + $score->mark3) / 3, 1);
+            }
+        }
+        
         return view('score.index', compact('scores'))
             ->with('i', (request()->input('page', 1) - 1) * $scores->perPage());
     }
