@@ -34,9 +34,10 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th></th>
 
-										<th>Name</th>
+										<th></th>
+                                        <th>Name</th>
 										<th>Surname</th>
 										<th>Email</th>
 
@@ -46,9 +47,9 @@
                                 <tbody>
                                     @foreach ($students as $student)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
 
-											<td>{{ $student->name }}</td>
+											<td><img width= 40px src="{{ $student->image }}" alt="Student Image"><td>
+                                            <td>{{ $student->name }}</td>
 											<td>{{ $student->surname }}</td>
 											<td>{{ $student->email }}</td>
 											
