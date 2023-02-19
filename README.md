@@ -100,9 +100,9 @@ You will need a text editor and perform the following steps:
   cd springfieldSchool
 ```
 
-3. Create a MySQL database named "ecoonwheels"
+3. Create a MySQL database named "springfieldelementaryschool"
 
-4. Create in the text editor an .env file by copying the contents of .env.example and modify the database name (laravel by ecoonwheels)
+4. Locate .env.example in the project and once there change the database name that comes by default for our database name (laravel for springfieldelementaryschool). After that, remove .example from the file name so its new name will be .env
 
 5. Install dependencies
 ```bash
