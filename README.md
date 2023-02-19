@@ -1,4 +1,4 @@
-<h1>Project: "Notas Escolares"</h1>
+<h1>Project: "School notes"</h1>
 
 <h2>1. Project description:</h2>
 <ul>
@@ -38,30 +38,17 @@
 | Raquel Palomo | Developer| https://github.com/raquel2002x|
 
 
-
-
-<!-- <h2>4. Project Demo (Preview)</h2>
-<div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
-<img style="width:400px; height:250px; margin:12px" src="https://user-images.githubusercontent.com/116546588/213402788-585bfa53-121f-42ac-8058-15d968106c40.gif" alt="Preliminary project demo"/>
-</div> -->
-
-
-<!-- <h2>5. Initial Sketch</h2>
-<div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
-<img style="width:600px; height:400px; margin:12px" src="" alt="initialSketch"/>
-</div> -->
-
 <h2>4. Atomic Design</h2> 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
-<img style="width:250px; height:400px; margin:12px" src="public/css/img/Atomic Simpsons (1).png" alt="Atomic Design"/>
+<img style="width:250px; height:400px; margin:12px" src="public/css/img/imageAtomic.png" alt="Atomic Design"/>
 </div>
 
 <h2>5. Final Design</h2> 
 <div style="heigth:auto; display:flex; flex-wrap:wrap; justify-content:center; padding:1rem">
 
-| Login |  Student Section |  Subject Section|  Student view | 
-| --- | --- | --- | --- | 
-| <img style="width:150px;" src="public/css/img/Login Principal .png" alt="Login"/> | <img style="width:150px;" src="public/css/img/Home Teacher -  Students Section.png" alt=""/> | <img style="width:150px;" src="public/css/img/Home Teacher - Materias Section.png" alt=""/> |  <img style="width:150px;" src="public/css/img/Home Teacher - Student Show view.png"/> | 
+| Login |  Home View |  Student View |  Student Show View | Score View |
+| --- | --- | --- | --- | --- |
+| <img style="width:150px;" src="public/css/img/imageLogin.png" alt="Login"/> | <img style="width:150px;" src="public/css/img/homeView.png" alt=""/> | <img style="width:150px;" src="public/css/img/studentView.png" alt=""/> |  <img style="width:150px;" src="public/css/img/studentShowView.png"/> | <img style="width:150px;" src="public/css/img/scoreView2.png"/> |
 
 </div>
 
@@ -131,12 +118,18 @@ You will need a text editor and perform the following steps:
 
  <h2>9. Tests</h2>
 
-To run the tests, execute the following command(s)
+To run the php tests, execute the following command(s)
 ```bash
   php artisan test
 ```
 <img width="259" alt="Screenshot test" src="https://user-images.githubusercontent.com/98114939/213283029-289028e1-0b25-445c-823d-eb97f476d4e6.png">
 
+
+To run the vendor tests, execute the following command(s)
+```bash
+  vendor/bin/phpunit
+```
+<img width="259" alt="Screenshot test" src="https://user-images.githubusercontent.com/98114939/213283029-289028e1-0b25-445c-823d-eb97f476d4e6.png">
 
 
 <h2>10. Methodology:</h2>
