@@ -79,12 +79,12 @@ You will need a text editor and perform the following steps:
 
 1. Clone the project
 ```bash
-  git clone https://https://github.com/raquel2002x/springfieldSchool
+  git clone https://github.com/Himorell/springfieldElementarySchool
 ```
 
 2. Go to the project directory
 ```bash
-  cd springfieldSchool
+  cd springfieldElementarySchool
 ```
 
 3. Create a MySQL database named "springfieldelementaryschool"
@@ -122,14 +122,14 @@ To run the php tests, execute the following command(s)
 ```bash
   php artisan test
 ```
-<img width="259" alt="Screenshot test" src="https://user-images.githubusercontent.com/98114939/213283029-289028e1-0b25-445c-823d-eb97f476d4e6.png">
+<img width="259" alt="Screenshot test" src="public/css/img/phpTest.png">
 
 
 To run the vendor tests, execute the following command(s)
 ```bash
   vendor/bin/phpunit
 ```
-<img width="259" alt="Screenshot test" src="https://user-images.githubusercontent.com/98114939/213283029-289028e1-0b25-445c-823d-eb97f476d4e6.png">
+<img width="259" alt="Screenshot test" src="public/css/img/vendorTest.png">
 
 
 <h2>10. Methodology:</h2>
@@ -141,9 +141,9 @@ To run the vendor tests, execute the following command(s)
 </ul>
 
 
-<h2>11. Next Steps</h2>
+<!-- <h2>11. Next Steps</h2>
 <ul>
 <li>Continue to implement the CRUD.</li>
 <li>Continue implementing the design.</li>
 <li>Continue implementing functionalities.</li>
-</ul>
+</ul> -->
