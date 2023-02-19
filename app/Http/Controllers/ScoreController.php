@@ -22,13 +22,17 @@ class ScoreController extends Controller
         $scores = Score::paginate();
 
         foreach($scores as $score) {
-            if ($score->mark2) {
+            if ($score->mark2 && !$score->mark3) {
                 $score->average = round(($score->mark1 + $score->mark2) / 2, 1);
+                continue;
             }
-            if ($score->mark3) {
-                $score->average = round(($score->mark1 + $score->mark2 + $score->mark3) / 3, 1);
-            }
+            $score->average = round(($score->mark1 + $score->mark2 + $score->mark3) / 3, 1);
         }
+        // usamos un bucle foreach para recorrer el array de puntuaciones
+        // comprobamos si existe la nota 2 pero no la nota 3, en ese caso
+        // hacemos media de la nota 1 y 2, seguidamente continuamos con el siguiente elemento de $scores 
+        // (si es que hay) con el comando continue
+        // en caso contrario hacemos la media con las 3 notas
         
         return view('score.index', compact('scores'))
             ->with('i', (request()->input('page', 1) - 1) * $scores->perPage());
