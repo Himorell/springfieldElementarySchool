@@ -42,7 +42,7 @@
                             {{ $score->quarter }}
                         </div>
                         <div class="form-group">
-                            <strong>Mark 1:</strong>
+                            <strong>Mark 1:</strong> 
                             {{ $score->mark1 }}
                         </div>
                         <div class="form-group">
