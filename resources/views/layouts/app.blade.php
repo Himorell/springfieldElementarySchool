@@ -6,10 +6,10 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" type="image/png" sizes="512x512" href="{{ asset('/images/logo.png') }}">
+    <link rel="shortcut icon" type="image/png" sizes="512x512" href="{{ asset('/css/img/favicon.png') }}">
     <title>{{ ('Springfield Elementary School') }}</title>
 
-    
+
     <!-- CSS -->
     <link href="{{ asset('css/listtudent.css') }}" rel="stylesheet">
     <link href="{{ asset('css/scores.css') }}" rel="stylesheet">
@@ -24,11 +24,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm opacity-75">
-            <div class="container">
+        <nav class="navbar navbar-expand-md" >
+            <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <a class="navbar-brand" href="#">
-                        <img src="css/imgwelcome/logo.png" alt="Bootstrap" width="" height="100">
+                        <img src="css/imgwelcome/logo.png" alt="Logo Springfield Elementary School" width="" height="150">
                     </a>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -57,7 +57,7 @@
                                 </li>
                             @endif
                         @else
-                        
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -88,7 +88,7 @@
         <main class="py-0">
             <div class="row">
                 <div class="col-md-2">
-                    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-warning" style="width: 260px; height:600px;">
+                    <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 260px; height:600px; background-color: #B5A2E1">
                         <img src="css/img/skinner.jpg" class="img-rounded">
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
@@ -133,10 +133,10 @@
                     @yield('content')
                 </div>
             </div>
-            
+
         </main>
         @endguest
-        
+
     </div>
 </body>
 </html>

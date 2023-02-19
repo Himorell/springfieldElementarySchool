@@ -79,8 +79,6 @@ class DatabaseSeeder extends Seeder
         //     'mark3' => '4',
         // ]);
 
-        // Score::factory(5)->create();
-
     }
 
 }
