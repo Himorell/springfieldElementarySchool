@@ -52,6 +52,10 @@
                             <strong>Mark 3:</strong>
                             {{ $score->mark3 }}
                         </div>
+                        <div class="form-group">
+                            <strong>Average:</strong>
+                            <strong>{{ $score->average }}</strong>
+                        </div>
                         
                     </div>
                 </div>
