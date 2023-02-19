@@ -79,8 +79,6 @@ class DatabaseSeeder extends Seeder
         //     'mark3' => '4',
         // ]);
 
-
-
     }
 
 }
