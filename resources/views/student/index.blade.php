@@ -57,11 +57,11 @@
 
                                             <td>
                                                 <form action="{{ route('students.destroy',$student->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('students.show',$student->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('students.edit',$student->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm  " href="{{ route('students.show',$student->id) }}"><div class="fa fa-fw fa-eye"><img src="css/img/showBottom.png" alt="Bottom Show"></div></a>
+                                                    <a class="btn btn-sm " href="{{ route('students.edit',$student->id) }}"><i class="fa fa-fw fa-edit"><img src="css/img/editBottom.png" alt="Bottom Edit"></i></a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"onclick="return confirm('Are you sure to delete this student? {{ $student->alertName}} - ID {{$student->id }}')"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-sm"onclick="return confirm('Are you sure to delete this student? {{ $student->alertName}} - ID {{$student->id }}')"><i class="fa fa-fw fa-trash"></i><img src="css/img/deleteBottom.png" alt="Bottom Delete"></button>
                                                 </form>
                                             </td>
                                         </tr>
