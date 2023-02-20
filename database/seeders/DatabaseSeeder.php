@@ -51,9 +51,6 @@ class DatabaseSeeder extends Seeder
             'name' => 'Lisa Simpson',
             'email' => 'lisa@springfield.com',
         ]); 
-
-        Student::factory(5)->create();
-
     }
 
 }
