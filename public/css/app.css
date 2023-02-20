@@ -18,4 +18,12 @@ body {
     background-color: #F8A2AC;
 }
 
+.logoSimpsons {
+    display: flex;
+    align-items:center;
+    height: 150px;
+    margin-left: 450px;
+}
+
+
 
