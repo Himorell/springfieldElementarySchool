@@ -1,8 +1,22 @@
 .card{
-margin-top: 150px;
-padding-bottom: 20px;
-background-color: #FFD782;
-border-radius: 1.5em;
+    display: flex;
+    margin-top: 150px;
+    padding-bottom: 20px;
+    background-color: #FFD782;
+    border-radius: 1.5em;
+    margin-right: 50px;
+}
+.cardLogin{
+    display: flex;
+    margin-top: 140px;
+    padding-bottom: 20px;
+    background-color: hsla(40, 100%, 99%, 0.259);
+    border-radius: 1.5em;
+    margin-right: 50px;
+}
+.cardLoginHeader{
+    margin-top: 40px;
+
 }
 /* renombrar card login para volver a ponerla blanca opaca */
 
@@ -17,10 +31,12 @@ border-radius: 1.5em;
 body {
     background-color: #F8A2AC;
 }
+.cardTitle {
+    font-size: larger;
+}
 
 .logoSimpsons {
     display: flex;
-    align-items:center;
     height: 150px;
     margin-left: 450px;
 }

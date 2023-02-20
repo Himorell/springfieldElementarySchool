@@ -88,7 +88,7 @@
         <main class="py-0">
             <div class="row">
                 <div class="col-md-2">
-                    <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 260px; height:600px; background-color: #B5A2E1">
+                    <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 260px; height:850px; background-color: #B5A2E1">
                         <img src="css/img/skinner.jpg" class="img-rounded">
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
