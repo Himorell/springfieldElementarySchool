@@ -14,7 +14,7 @@
 
                             <span class="cardTitle" id="card_title">
                                 {{ __('Score') }}
-                            </span>
+                            </span> 
 
                             <div class="float-right">
                                 <a href="{{ route('scores.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
