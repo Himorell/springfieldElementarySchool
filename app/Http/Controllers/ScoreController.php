@@ -51,8 +51,8 @@ class ScoreController extends Controller
                 continue;
             }
         }
-        
-        
+
+
         return view('score.index', compact('scores'))
             ->with('i', (request()->input('page', 1) - 1) * $scores->perPage());
     }
@@ -90,6 +90,15 @@ class ScoreController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'academicYear'=>'required',
+            'course'=>'required|numeric|min:1|max:6',
+            'subject'=>'required',
+            'quarter'=>'required|numeric|min:1|max:3',
+            'mark1'=>'nullable|numeric|min:1|max:10',
+            'mark2'=>'nullable|numeric|min:1|max:10',
+            'mark3'=>'nullable|numeric|min:1|max:10',
+        ]);
 
         $score = Score::create($request->all());
         $students = Student::pluck('name','id');

@@ -43,7 +43,11 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $request->validate([
+            'name'=>'required',
+            'surname'=>'required',
+            'email'=>'required|email'
+        ]);
 
         $student = Student::create($request->all());
 
@@ -86,7 +90,7 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        
+
 
         $student->update($request->all());
 
