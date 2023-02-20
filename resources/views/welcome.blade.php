@@ -5,13 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="cardLogin">
-                <div class="cardLoginHeader">
-                <span class= "cardTitle" id="card_title">
-                        {{ __('Login') }}
-                </span>
-                </div>
+                <div class="cardLoginHeader">{{ __('Login') }}</div>
+                
             <title>Springfield Elementary School</title>
-                <div class="card-body">
+                <div class="cardLoginBody">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

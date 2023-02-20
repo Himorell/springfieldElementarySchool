@@ -15,6 +15,7 @@
                             <span class= cardTitle id="card_title">
                                 {{ __('Student') }}
                             </span>
+                            
 
                             <div class="float-right">
                                 <a href="{{ route('students.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">

@@ -6,19 +6,32 @@
     border-radius: 1.5em;
     margin-right: 50px;
 }
+.container{
+    justify-self: center;
+    margin-right: 100px;
+}
 .cardLogin{
     display: flex;
-    margin-top: 140px;
+    height: 350px;
+    width: 600px;
+    margin-top: 160px;
     padding-bottom: 20px;
-    background-color: hsla(40, 100%, 99%, 0.259);
+    background-color: hsla(0, 0%, 100%, 0.502);
     border-radius: 1.5em;
     margin-right: 50px;
 }
 .cardLoginHeader{
-    margin-top: 40px;
-
+    display:flex;
+    align-self: flex-start;
+    font-size: large;
+    margin-left: 50px;
+    margin-top: 20px;
 }
-/* renombrar card login para volver a ponerla blanca opaca */
+.cardLoginBody{
+    margin-top: 60px;
+    width: 400px;
+    align-items: center;
+}
 
 .img-rounded {
     border-radius: 50%;
@@ -38,7 +51,7 @@ body {
 .logoSimpsons {
     display: flex;
     height: 150px;
-    margin-left: 450px;
+    margin-left: 350px;
 }
 
 
