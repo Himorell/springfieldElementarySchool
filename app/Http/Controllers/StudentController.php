@@ -17,8 +17,8 @@ class StudentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $students = Student::paginate();
+        {
+            $students = Student::paginate();
 
         return view('student.index', compact('students'))
             ->with('i', (request()->input('page', 1) - 1) * $students->perPage());
@@ -74,8 +74,10 @@ class StudentController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
+
+
         $student = Student::find($id);
 
         return view('student.edit', compact('student'));
@@ -88,11 +90,8 @@ class StudentController extends Controller
      * @param  Student $student
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Student $student)
     {
-
-
-        $student->update($request->all());
 
         return redirect()->route('students.index')
             ->with('success', 'Student updated successfully');

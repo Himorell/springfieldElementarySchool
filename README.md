@@ -40,7 +40,7 @@
 
 <h2>4. Atomic Design</h2> 
 <div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
-<img style="width:250px; height:400px; margin:12px" src="public/css/img/imageAtomic.png" alt="Atomic Design"/>
+<img style="width:250px; height:400px; margin:12px" src="public/css/img/imageAtomicD.png" alt="Atomic Design"/>
 </div>
 
 <h2>5. Final Design</h2> 
