@@ -28,7 +28,7 @@
             <div class="container" >
                 <a class="logoSimpsons" href="{{ url('/') }}">
                     <a class="navbar-brand" href="#">
-                        <img src="css/imgwelcome/logo.png" alt="Logo Springfield Elementary School" width="" height="150" >
+                        <img src="/css/imgwelcome/logo.png" alt="Logo Springfield Elementary School" width="" height="150" >
                     </a>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -89,7 +89,7 @@
             <div class="row">
                 <div class="col-md-2">
                     <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 260px; height:850px; background-color: #B5A2E1">
-                        <img src="css/img/skinner.jpg" class="img-rounded">
+                        <img src="/css/img/skinner.jpg" class="img-rounded">
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
                             <li class="nav-item">
@@ -113,7 +113,7 @@
                           <li>
                               <div class="dropdown">
                                   <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="css/img/skinner.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                                    <img src="/css/img/skinner.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
                                     <strong>Subjects</strong>
                                   </a>
                                   <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
