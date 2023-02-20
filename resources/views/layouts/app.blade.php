@@ -22,7 +22,7 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body> 
     <div id="app">
         <nav class="navbar navbar-expand-md" >
             <div class="container" >
