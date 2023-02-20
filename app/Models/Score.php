@@ -28,19 +28,6 @@ class Score extends Model
 {
   use HasFactory;  
 
-    // static $rules = [
-		// 'id_students' => 'required',
-		// 'mark1' => 'required',
-    // 'mark2' => 'required',
-    // 'mark3' => 'required',
-		// 'quarter' => 'required',
-		// 'subject' => 'required',
-		// 'course' => 'required',
-		// 'academicYear' => 'required',
-    // ];
-
-    // protected $perPage = 20;
-
     /**
      * Attributes that should be mass-assignable.
      *
