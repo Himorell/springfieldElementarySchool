@@ -141,9 +141,23 @@ To run the vendor tests, execute the following command(s)
 </ul>
 
 
-<!-- <h2>11. Next Steps</h2>
+<h2>11. Next Steps</h2>
 <ul>
-<li>Continue to implement the CRUD.</li>
-<li>Continue implementing the design.</li>
-<li>Continue implementing functionalities.</li>
-</ul> -->
+<li>Conexión Cloudinary con BBDD.</li>
+<li>Cerrar trimestre y año escolar.</li>
+<li>Vista por asignaturas.</li>
+<li>Enviar email de notas y recuperación.</li>
+<li>Test de notas.</li>
+<li>Mejorar el estilo de las vistas.</li>
+<li>En portada mostrar todo el alumnado con las asignaturas y sus notas y con la media por trimestre.
+</li>
+<li>Integrar roles y permisos para la gestión de notas
+</li>
+
+</ul> 
+
+
+
+
+
+
